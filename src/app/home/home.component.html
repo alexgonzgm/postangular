@@ -1,0 +1,33 @@
+
+    <div class="container">
+        <h1>Todos los usuarios </h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th></th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let usuario of usuarios">
+                    <td >{{usuario.id}}</td>
+                    <td >{{usuario.email}}</td>
+                    <td >{{usuario.first_name}}</td>
+                    <td >{{usuario.last_name}}</td>
+                    <td>
+                      <a class="btn btn-info" [routerLink]="['/detalles/', usuario.id]">Detalles</a>
+
+                    </td>
+
+                  
+                </tr>
+                
+            </tbody>
+        </table>
+        
+
+    </div>

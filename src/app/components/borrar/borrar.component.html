@@ -1,0 +1,23 @@
+<div class="container card">
+    <h1>Detalles del usuario {{usuario.first_name}}</h1>
+   
+    <form class="form-group">
+        <label >Id Usuario :</label>
+        <input type="number" class="form-control" readonly  value="{{usuario.id}}">
+
+        <label >Nombre :</label>
+        <input type="text" class="form-control"  readonly  value="{{usuario.first_name}}">
+
+        <label >Apellidos :</label>
+        <input type="text" class="form-control"  readonly value="{{usuario.last_name}}">
+        
+        <label >Email :</label>
+        <input type="text" class="form-control"  readonly  value="{{usuario.email}}">
+
+    </form>
+   
+    <button  (click)="borrarUsuario()" class="btn btn-danger mb-2">Borrar</button>
+   
+
+</div>
+

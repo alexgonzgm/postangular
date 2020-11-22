@@ -1,0 +1,20 @@
+<div>
+    <h1>Actualizar usuario {{usuario.first_name}}</h1>
+</div>
+<form #updateForm="ngForm" class="form-group">
+    <label >Id Usuario :</label>
+    <input type="number" class="form-control" #cajannumero name="cajanumero" value="{{usuario.id}}">
+
+    <label >Nombre :</label>
+    <input type="text" class="form-control"  #cajanombre name="cajanombre" value="{{usuario.first_name}}">
+
+    <label >Apellidos :</label>
+    <input type="text" class="form-control" #cajaapellidos  name="cajaapellidos" value="{{usuario.last_name}}">
+
+    <label >Email :</label>
+    <input type="text" class="form-control" #cajaemail name="cajaemail" value="{{usuario.email}}">
+    
+    <button (click)="updateUsuario()" class="btn btn-success mt-2">
+        modificar
+    </button>
+</form>
